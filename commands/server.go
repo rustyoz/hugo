@@ -30,6 +30,7 @@ import (
 	"github.com/spf13/hugo/hugofs"
 	jww "github.com/spf13/jwalterweatherman"
 	"github.com/spf13/viper"
+	"github.com/masterminds/go-fileserver"
 )
 
 var serverPort int
@@ -121,17 +122,22 @@ func serve(port int) {
 	jww.FEEDBACK.Println("Serving pages from " + helpers.AbsPathify(viper.GetString("PublishDir")))
 
 	httpFs := &afero.HttpFs{SourceFs: hugofs.DestinationFS}
-	fileserver := http.FileServer(httpFs.Dir(helpers.AbsPathify(viper.GetString("PublishDir"))))
+	server := fileserver.FileServer(httpFs.Dir(helpers.AbsPathify(viper.GetString("PublishDir"))))
 
+	fileserver.NotFoundHandler = func(w http.ResponseWriter, req *http.Request) {
+		http.ServeFile(w, req, helpers.AbsPathify(viper.GetString("PublishDir")+ "/404.html"))
+	}
+
+	
 	// We're only interested in the path
 	u, err := url.Parse(viper.GetString("BaseURL"))
 	if err != nil {
 		jww.ERROR.Fatalf("Invalid BaseURL: %s", err)
 	}
 	if u.Path == "" || u.Path == "/" {
-		http.Handle("/", fileserver)
+		http.Handle("/", server)
 	} else {
-		http.Handle(u.Path, http.StripPrefix(u.Path, fileserver))
+		http.Handle(u.Path, http.StripPrefix(u.Path, server))
 	}
 
 	u.Host = net.JoinHostPort(serverInterface, strconv.Itoa(serverPort))
