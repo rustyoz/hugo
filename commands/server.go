@@ -128,6 +128,13 @@ func serve(port int) {
 	if err != nil {
 		jww.ERROR.Fatalf("Invalid BaseURL: %s", err)
 	}
+
+	if WebEditor {
+		http.HandleFunc("/view/", makeHandler(viewHandler))
+		http.HandleFunc("/edit/", makeHandler(editHandler))
+		http.HandleFunc("/save/", makeHandler(saveHandler))
+	}
+
 	if u.Path == "" || u.Path == "/" {
 		http.Handle("/", fileserver)
 	} else {
