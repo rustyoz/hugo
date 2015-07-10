@@ -204,6 +204,10 @@ func GetStaticDirPath() string {
 	return AbsPathify(viper.GetString("StaticDir"))
 }
 
+func GetContentDirPath() string {
+	return AbsPathify(viper.GetString("ContentDir"))
+}
+
 // Get the root directory of the current theme, if there is one.
 // If there is no theme, returns the empty string.
 func GetThemeDir() string {
