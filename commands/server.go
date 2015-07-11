@@ -24,6 +24,7 @@ import (
 	"strings"
 	"time"
 
+	"github.com/GeertJohan/go.rice"
 	"github.com/spf13/afero"
 	"github.com/spf13/cobra"
 	"github.com/spf13/hugo/helpers"
@@ -130,6 +131,7 @@ func serve(port int) {
 	}
 
 	if WebEditor {
+		http.Handle("/epiceditor/", http.StripPrefix("/epiceditor/", http.FileServer(rice.MustFindBox("epiceditor").HTTPBox())))
 		http.HandleFunc("/view/", makeHandler(viewHandler))
 		http.HandleFunc("/edit/", makeHandler(editHandler))
 		http.HandleFunc("/save/", makeHandler(saveHandler))

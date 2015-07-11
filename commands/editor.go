@@ -112,11 +112,13 @@ func editTemplate() string {
 	return `
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.3/jquery.min.js"></script>
 
+<script src="/epiceditor/js/epiceditor.js"></script>
 
 <div style="width: 50%; float: left; height: 100%; display: flex; flex-direction: column; flex-grow: 1;" >
 <h1>Editing {{.Title}}</h1>
 <form id="edit" action="/save/{{.Title}}" method="POST" style="display: flex; flex-direction: column; flex-grow: 1;" >
-<textarea name="body" style="width: 100%; flex-grow: 1;">{{printf "%s" .Body}}</textarea>
+<textarea  id="body" name="body" style="display: none;">{{printf "%s" .Body}}</textarea>
+<div id="epiceditor" style="flex-grow: 1;"></div>
 <input type="submit" value="Save">
 </form>
 </div>
@@ -125,7 +127,7 @@ func editTemplate() string {
 <iframe src="{{ .Url }}" style="width: 100%; flex-grow: 1;"></iframe>
 </div>
 
-<script>style="width: 100%;"
+<script>
 // Attach a submit handler to the form
 $( "#edit" ).submit(function( event ) {
  
@@ -135,16 +137,20 @@ $( "#edit" ).submit(function( event ) {
 
   var postdata = $form.serialize();
   var posturl = $form.attr( "action" );
- 
+
   $.ajax({
 	url: posturl,
 	type: "post", 
 	data: postdata
   });
- 
+
 
 });
 </script>
+<script>
+var opts ={ basePath: '/epiceditor', textarea: "body",}
+var editor = new EpicEditor(opts).load();</script>
+
 `
 
 }
