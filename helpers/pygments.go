@@ -17,7 +17,7 @@ import (
 	"bytes"
 	"crypto/sha1"
 	"fmt"
-	"github.com/spf13/hugo/hugofs"
+	"github.com/rustyoz/hugo/hugofs"
 	jww "github.com/spf13/jwalterweatherman"
 	"github.com/spf13/viper"
 	"io"

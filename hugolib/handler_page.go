@@ -14,9 +14,9 @@
 package hugolib
 
 import (
-	"github.com/spf13/hugo/helpers"
-	"github.com/spf13/hugo/source"
-	"github.com/spf13/hugo/tpl"
+	"github.com/rustyoz/hugo/helpers"
+	"github.com/rustyoz/hugo/source"
+	"github.com/rustyoz/hugo/tpl"
 	jww "github.com/spf13/jwalterweatherman"
 )
 

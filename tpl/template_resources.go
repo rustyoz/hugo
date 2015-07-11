@@ -28,8 +28,8 @@ import (
 	"time"
 
 	"github.com/spf13/afero"
-	"github.com/spf13/hugo/helpers"
-	"github.com/spf13/hugo/hugofs"
+	"github.com/rustyoz/hugo/helpers"
+	"github.com/rustyoz/hugo/hugofs"
 	jww "github.com/spf13/jwalterweatherman"
 	"github.com/spf13/viper"
 )

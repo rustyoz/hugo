@@ -14,7 +14,7 @@
 package source
 
 import (
-	"github.com/spf13/hugo/helpers"
+	"github.com/rustyoz/hugo/helpers"
 	"io"
 	"path/filepath"
 	"strings"

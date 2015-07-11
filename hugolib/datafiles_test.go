@@ -1,8 +1,8 @@
 package hugolib
 
 import (
-	"github.com/spf13/hugo/parser"
-	"github.com/spf13/hugo/source"
+	"github.com/rustyoz/hugo/parser"
+	"github.com/rustyoz/hugo/source"
 	"path/filepath"
 	"reflect"
 	"testing"

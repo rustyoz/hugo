@@ -5,7 +5,7 @@ import (
 	"path/filepath"
 	"testing"
 
-	"github.com/spf13/hugo/source"
+	"github.com/rustyoz/hugo/source"
 	"github.com/spf13/viper"
 )
 

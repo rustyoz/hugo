@@ -24,10 +24,10 @@ import (
 	"time"
 
 	"github.com/spf13/cast"
-	"github.com/spf13/hugo/helpers"
-	"github.com/spf13/hugo/hugofs"
-	"github.com/spf13/hugo/hugolib"
-	"github.com/spf13/hugo/parser"
+	"github.com/rustyoz/hugo/helpers"
+	"github.com/rustyoz/hugo/hugofs"
+	"github.com/rustyoz/hugo/hugolib"
+	"github.com/rustyoz/hugo/parser"
 	jww "github.com/spf13/jwalterweatherman"
 	"github.com/spf13/viper"
 )
@@ -143,7 +143,7 @@ func FindArchetype(kind string) (outpath string) {
 	for _, x := range search {
 		// If the new content isn't in a subdirectory, kind == "".
 		// Therefore it should be excluded otherwise `is a directory`
-		// error will occur. github.com/spf13/hugo/issues/411
+		// error will occur. github.com/rustyoz/hugo/issues/411
 		var pathsToCheck []string
 
 		if kind == "" {

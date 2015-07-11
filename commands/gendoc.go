@@ -3,8 +3,8 @@ package commands
 import (
 	"fmt"
 	"github.com/spf13/cobra"
-	"github.com/spf13/hugo/helpers"
-	"github.com/spf13/hugo/hugofs"
+	"github.com/rustyoz/hugo/helpers"
+	"github.com/rustyoz/hugo/hugofs"
 	"path"
 	"path/filepath"
 	"strings"

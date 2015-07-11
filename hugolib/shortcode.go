@@ -24,9 +24,9 @@ import (
 	"strings"
 	"sync"
 
-	bp "github.com/spf13/hugo/bufferpool"
-	"github.com/spf13/hugo/helpers"
-	"github.com/spf13/hugo/tpl"
+	bp "github.com/rustyoz/hugo/bufferpool"
+	"github.com/rustyoz/hugo/helpers"
+	"github.com/rustyoz/hugo/tpl"
 	jww "github.com/spf13/jwalterweatherman"
 )
 

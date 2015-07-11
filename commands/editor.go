@@ -6,7 +6,7 @@ package commands
 
 import (
 	"flag"
-	"github.com/spf13/hugo/helpers"
+	"github.com/rustyoz/hugo/helpers"
 	"html/template"
 	"io/ioutil"
 	"net/http"

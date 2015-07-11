@@ -14,7 +14,7 @@
 package hugolib
 
 import (
-	"github.com/spf13/hugo/helpers"
+	"github.com/rustyoz/hugo/helpers"
 	"html/template"
 	"sync"
 	"time"

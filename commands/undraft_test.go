@@ -8,7 +8,7 @@ import (
 	"testing"
 	"time"
 
-	"github.com/spf13/hugo/parser"
+	"github.com/rustyoz/hugo/parser"
 )
 
 var (

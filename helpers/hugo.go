@@ -18,8 +18,8 @@ import (
 	"io/ioutil"
 	"path/filepath"
 
-	"github.com/spf13/hugo/hugofs"
-	"github.com/spf13/hugo/parser"
+	"github.com/rustyoz/hugo/hugofs"
+	"github.com/rustyoz/hugo/parser"
 )
 
 // this should be the only one

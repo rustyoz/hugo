@@ -8,8 +8,8 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/spf13/hugo/helpers"
-	"github.com/spf13/hugo/tpl"
+	"github.com/rustyoz/hugo/helpers"
+	"github.com/rustyoz/hugo/tpl"
 	"github.com/spf13/viper"
 )
 

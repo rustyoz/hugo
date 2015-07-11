@@ -7,9 +7,9 @@ import (
 	"html/template"
 
 	"github.com/spf13/afero"
-	"github.com/spf13/hugo/hugofs"
-	"github.com/spf13/hugo/source"
-	"github.com/spf13/hugo/target"
+	"github.com/rustyoz/hugo/hugofs"
+	"github.com/rustyoz/hugo/source"
+	"github.com/rustyoz/hugo/target"
 	"github.com/spf13/viper"
 )
 

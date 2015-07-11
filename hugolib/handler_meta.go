@@ -18,7 +18,7 @@ import (
 
 	"fmt"
 
-	"github.com/spf13/hugo/source"
+	"github.com/rustyoz/hugo/source"
 )
 
 var handlers []Handler

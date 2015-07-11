@@ -23,7 +23,7 @@ import (
 	"regexp"
 	"strings"
 
-	"github.com/spf13/hugo/helpers"
+	"github.com/rustyoz/hugo/helpers"
 	jww "github.com/spf13/jwalterweatherman"
 )
 

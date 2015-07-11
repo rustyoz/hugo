@@ -2,7 +2,7 @@ package transform
 
 import (
 	"bytes"
-	"github.com/spf13/hugo/helpers"
+	"github.com/rustyoz/hugo/helpers"
 	"path/filepath"
 	"strings"
 	"testing"

@@ -7,7 +7,7 @@ import (
 	"strconv"
 	"strings"
 
-	"github.com/spf13/hugo/helpers"
+	"github.com/rustyoz/hugo/helpers"
 )
 
 // PathPattern represents a string which builds up a URL from attributes

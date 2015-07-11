@@ -18,7 +18,7 @@ import (
 	"path/filepath"
 
 	"github.com/spf13/cobra"
-	"github.com/spf13/hugo/hugolib"
+	"github.com/rustyoz/hugo/hugolib"
 	"github.com/spf13/viper"
 )
 

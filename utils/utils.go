@@ -50,7 +50,7 @@ func StopOnErr(err error, s ...string) {
 //
 // This is done because Cobra already prints Hugo's usage message; not eliding
 // would result in the usage output being printed twice, which leads to bug
-// reports, more specifically: https://github.com/spf13/hugo/issues/374
+// reports, more specifically: https://github.com/rustyoz/hugo/issues/374
 func cutUsageMessage(s string) string {
 	pieces := strings.Split(s, "Usage of")
 	return strings.TrimSpace(pieces[0])

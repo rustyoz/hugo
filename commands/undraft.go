@@ -19,7 +19,7 @@ import (
 	"time"
 
 	"github.com/spf13/cobra"
-	"github.com/spf13/hugo/parser"
+	"github.com/rustyoz/hugo/parser"
 	jww "github.com/spf13/jwalterweatherman"
 )
 

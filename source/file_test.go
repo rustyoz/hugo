@@ -1,7 +1,7 @@
 package source
 
 import (
-	"github.com/spf13/hugo/helpers"
+	"github.com/rustyoz/hugo/helpers"
 	"github.com/stretchr/testify/assert"
 	"testing"
 )
